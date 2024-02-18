@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="./round2.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <spline-viewer id="splineViewer" url="https://prod.spline.design/eiu9-CcMnuxao3Hs/scene.splinecode"></spline-viewer>
+  <div class="wrapper">
+    <h1 id="myHeading" class="animated-heading">Let's Dive into the Future</h1> <br />
+  </div>
+
+  <div class="wrapper">
+    <button class="go-btn" onclick="redirectToDifferentPage()"> Let's Go !</button>
+  </div>
+
+  <div class="black-box"></div>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js"></script>
+  <script>
+    const viewer = document.getElementById('splineViewer');
+    viewer.style.position = 'fixed';
+    viewer.style.top = '0';
+    viewer.style.left = '0';
+    viewer.style.width = '100vw';
+    viewer.style.height = '100vh';
+    viewer.style.zIndex = '-1';
+
+    const heading = document.getElementById('myHeading');
+
+    heading.style.opacity = '0';
+
+    viewer.addEventListener('load', function() {
+      setTimeout(() => {
+        heading.style.opacity = '1';
+        heading.style.fontSize = '7rem';
+      }, 1000);
+    });
+
+    function redirectToDifferentPage() {
+      window.location.href = './timeShift.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style2.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <spline-viewer id="splineViewer" url="https://prod.spline.design/UUsCrzARaimfBqK1/scene.splinecode"></spline-viewer>
+  <div class="wrapper2">
+    <h3 id="myHeading2" class="animated-heading-2">Level 7 Automatic Cars</h3> <br />
+  </div>
+
+  <div class="wrapper3">
+    <button class="go-btn-2" onclick="redirectToDifferentPage()"> </button>
+  </div>
+
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js"></script>
+  <script>
+    const viewer = document.getElementById('splineViewer');
+    viewer.style.position = 'fixed';
+    viewer.style.top = '0';
+    viewer.style.left = '0';
+    viewer.style.width = '100vw';
+    viewer.style.height = '100vh';
+    viewer.style.zIndex = '1';
+
+    // Function to redirect to a different page
+    function redirectToDifferentPage() {
+      // Redirect to the desired page
+      window.location.href = './timeShift2.html'; 
+    }
+  </script>
+</body>
+</html>
